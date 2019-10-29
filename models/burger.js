@@ -20,8 +20,10 @@ const Burger = {
     orm.updateOne('burgers', itemIdGiven, function(results) {
       console.table(results);
       callback(results)
-    })
-  }
+    }) 
+  } // end of update function
 
 
 } // end of Burger object
+
+module.exports = Burger;
