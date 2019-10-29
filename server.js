@@ -1,12 +1,16 @@
-const orm = require('./config/orm.js');
+const express = require('express');
+const expressHandleBars  = require('express-handlebars');
+const port = process.env.PORT || 3000; 
+const app = express();
+ 
+app.engine('handlebars', expressHandleBars());
+app.set('view engine', 'handlebars');
+app.use(express.json());
 
-// Testing the insert functionality
-  // orm.insertOne('burgers','philly cheese burger');
-// Testing the update functionality
-  // orm.updateOne('burgers', 4);
-// Testing the Select All functionality
-  // orm.selectAll('burgers');
+const routes = require('./controllers/burgers_controller.js');
 
-  orm.selectAll('burgers', function(results) {
-    console.log(results);
-  })
+app.use(routes)
+
+app.listen(port, function() {
+  console.log(`Server Running On Port: ${port}`);
+});
