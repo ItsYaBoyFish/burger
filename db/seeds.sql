@@ -1,4 +1,4 @@
 -- Inserting into the database
-insert into burgers (burger_name) values ('Test');
-insert into burgers (burger_name, devoured) values ('Hello', true);
-insert into burgers (burger_name, devoured) values ('again', true);
+insert into burgers (burger_name) values ('Cheeseburger');
+insert into burgers (burger_name) values ('Bacon Cheeseburger');
+insert into burgers (burger_name, devoured) values ('Vegan Burger', true);
