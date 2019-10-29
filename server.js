@@ -6,4 +6,7 @@ const orm = require('./config/orm.js');
   // orm.updateOne('burgers', 4);
 // Testing the Select All functionality
   // orm.selectAll('burgers');
-  
+
+  orm.selectAll('burgers', function(results) {
+    console.log(results);
+  })
