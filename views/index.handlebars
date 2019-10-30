@@ -1,9 +1,21 @@
 
-{{#each burger}}
-  <li>{{this.burger_name}}</li>
-{{/each}}
 
+<div class="container">
+  <div class="notEaten">
+  {{#each burger}}
+    <div class="items-div">
+      <li class="list-items">{{this.burger_name}}</li>
+    </div>
+  {{/each}}
+  </div>
 
-
+  <div class="eaten">
+    {{#each burger}}
+      <div class="items-div">
+        <li class="list-items">{{this.burger_name}}</li>
+      </div>
+    {{/each}}
+  </div>
+</div>
 
 
