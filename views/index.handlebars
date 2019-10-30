@@ -1,21 +1,29 @@
 
 
 <div class="container">
-  <div class="notEaten">
-  {{#each burger}}
-    <div class="items-div">
-      <li class="list-items">{{this.burger_name}}</li>
-    </div>
-  {{/each}}
+  <div class="img-div">
+    <img class="img" src="burger.png" alt="burger image">
+    <label for="burger" class='input-label'>Enter A New Burger!</label>
+    <input class="input" id="newBurger" type="text">
+    <button id="submitBtn" class="submitBtn">Cook It!</button>
   </div>
+  <div class="list-containers">
+    <div class="notEaten">
+      {{#each burger}}
+        <div class="items-div">
+          <li class="list-items">{{this.burger_name}}</li>
+        </div>
+      {{/each}}
+    </div> <!-- End of notEaten Div. -->
 
-  <div class="eaten">
-    {{#each burger}}
-      <div class="items-div">
-        <li class="list-items">{{this.burger_name}}</li>
-      </div>
-    {{/each}}
-  </div>
-</div>
+    <div class="eaten">
+      {{#each burger}}
+        <div class="items-div">
+          <li class="list-items">{{this.burger_name}}</li>
+        </div>
+      {{/each}}
+    </div> <!-- End of eaten Div. -->
+  </div> <!-- End of list-containers Div. -->
+</div> <!-- End of container Div. -->
 
 

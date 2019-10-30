@@ -12,6 +12,7 @@ const routes = require('./controllers/burgers_controller.js');
 
 app.use(routes)
 app.use(express.static(path.join(__dirname, 'public/assets/css')));
+app.use(express.static(path.join(__dirname, 'public/assets/img')));
 
 app.listen(port, function() {
   console.log(`Server Running On Port: ${port}`);
