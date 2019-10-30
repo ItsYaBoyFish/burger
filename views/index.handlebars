@@ -9,17 +9,19 @@
   </div>
   <div class="list-containers">
     <div class="notEaten">
-      {{#each burger}}
+      {{#each notEaten}}
         <div class="items-div">
-          <li class="list-items">{{this.burger_name}}</li>
+          <button action="/api/update/{{this.id}}" method="PUT" class='devour-button' data-id="{{this.id}}">Devour!</button>
+          <li data-id="{{this.id}}" class="list-items">{{this.burger_name}}</li>
         </div>
       {{/each}}
     </div> <!-- End of notEaten Div. -->
 
     <div class="eaten">
-      {{#each burger}}
+      {{#each eaten}}
         <div class="items-div">
-          <li class="list-items">{{this.burger_name}}</li>
+          <button action="/api/update/{{this.id}}" method="PUT" class='devour-button' data-id="{{this.id}}">Devour!</button>
+          <li data-id="{{this.id}}" class="list-items">{{this.burger_name}}</li>
         </div>
       {{/each}}
     </div> <!-- End of eaten Div. -->

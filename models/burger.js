@@ -16,8 +16,8 @@ const Burger = {
     });
   }, // end of create function
 
-  update: function(callback) {
-    orm.updateOne('burgers', itemIdGiven, function(results) {
+  update: function(idGiven, callback) {
+    orm.updateOne('burgers', idGiven, function(results) {
       console.table(results);
       callback(results)
     }) 
