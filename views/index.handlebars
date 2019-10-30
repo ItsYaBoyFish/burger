@@ -1,5 +1,3 @@
-
-
 <div class="container">
   <div class="img-div">
     <img class="img" src="burger.png" alt="burger image">
@@ -20,8 +18,7 @@
     <div class="eaten">
       {{#each eaten}}
         <div class="items-div">
-          <button action="/api/update/{{this.id}}" method="PUT" class='devour-button' data-id="{{this.id}}">Devour!</button>
-          <li data-id="{{this.id}}" class="list-items">{{this.burger_name}}</li>
+          <li readonly data-id="{{this.id}}" class="list-items">{{this.burger_name}}</li>
         </div>
       {{/each}}
     </div> <!-- End of eaten Div. -->

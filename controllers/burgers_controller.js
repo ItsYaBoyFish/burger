@@ -33,8 +33,28 @@ router.put('/api/update/:id', function(req, res) {
     console.log(id);
     console.log(results);
   })
-  res.render('index');
+  // res.redirect('/');
+  res.end();
+  homePage();
 })
+
+router.post('/api/post', function(req, res) {
+  var burgerName = req.body;
+  console.log(burgerName.name);
+  Burger.create(burgerName.name, function(results) {
+    console.log(results);
+  })
+})
+
+function homePage() {
+  let options = {
+    method: 'GET',
+    headers: {
+      "Content-Type":"application/json"
+    }
+  }
+  fetch('/', options);
+}
 
 
 module.exports = router;

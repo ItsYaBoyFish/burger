@@ -32,7 +32,7 @@ body {
   margin-left: 1em;
   border-radius: 10px;
   position: fixed;
-  top: 20%;
+  top: 10%;
   margin-left: 28%;
   outline: none;
   border: none;
@@ -46,12 +46,12 @@ body {
   font-size: 20px;
   margin-left: 1em;
   position: fixed;
-  top: 21%;
+  top: 10.5%;
 }
 
 .submitBtn {
   position: fixed;
-  top: 35%;
+  top: 18%;
   margin-left: 7em;
   font-size: 20px;
   border-radius: 10px;
@@ -59,6 +59,19 @@ body {
   border: none;
   outline: none;
   padding: 10px 20px;
+  cursor: pointer;
+}
+
+.notEaten {
+  /* background-color: red; */
+  height: 400px;
+  overflow: scroll;
+}
+
+.eaten {
+  /* background-color: yellow; */
+  height: 400px;
+  overflow: scroll;
 }
 
 .list-items {

@@ -9,7 +9,7 @@ const Burger = {
     })
   }, // end of all function
 
-  create: function(callback, userValue) {
+  create: function(userValue, callback) {
     orm.insertOne('burgers', userValue, function(results) {
       console.table(results);
       callback(results)
