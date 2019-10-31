@@ -15,14 +15,14 @@ router.get('/', function(req, res) {
         eaten.push(data[i])
       }
     }
-    console.log(eaten);
-    console.log('============');
-    console.log(notEaten);
+    // console.log(eaten);
+    // console.log('============');
+    // console.log(notEaten);
     var handleBarsObject = {
       eaten: eaten,
       notEaten: notEaten
     }
-    console.log(handleBarsObject);
+    // console.log(handleBarsObject);
     res.render('index', handleBarsObject);
   })
 })
@@ -33,9 +33,7 @@ router.put('/api/update/:id', function(req, res) {
     console.log(id);
     console.log(results);
   })
-  // res.redirect('/');
-  res.end();
-  homePage();
+  res.redirect(303, '/');
 })
 
 router.post('/api/post', function(req, res) {
@@ -44,17 +42,9 @@ router.post('/api/post', function(req, res) {
   Burger.create(burgerName.name, function(results) {
     console.log(results);
   })
+  res.status(303, res.redirect('/'));
+  res.end();
 })
-
-function homePage() {
-  let options = {
-    method: 'GET',
-    headers: {
-      "Content-Type":"application/json"
-    }
-  }
-  fetch('/', options);
-}
 
 
 module.exports = router;
