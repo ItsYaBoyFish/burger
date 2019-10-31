@@ -13,7 +13,7 @@ $(document).on('click', '.devour-button', function() {
    axios.put(`/api/update/${id}`).then(function(response) {
      console.log(response);
      if (response.status === 200) {
-      alert(`You have created a new burger!`);
+      alert(`You have eaten a burger!`);
       location.reload();
     }
    });
